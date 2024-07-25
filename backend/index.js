@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(authRouter);
 app.use('/api', truckRouter);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.DBURI, {
     useNewUrlParser: true,
