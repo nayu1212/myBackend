@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const authRouter = require('./routes/auth');
+const authAdminRouter=require('./routes/adminAuth');
 require('dotenv').config();
 
 const bodyParser = require('body-parser');
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(authRouter);
+app.use(authAdminRouter);
 app.use('/api', truckRouter);
 
 const PORT = process.env.PORT || 3000;
